@@ -1,5 +1,10 @@
-import { render } from 'react-dom'
+import { render } from 'react-dom';
+import { App } from './App';
+import { SidebarProvider } from './contexts/SidebarContext';
 
-import { App } from './App'
-
-render(<App />, document.getElementById('root'))
+render(
+  <SidebarProvider selectedGenreId={1}>
+    <App />
+  </SidebarProvider>,
+  document.getElementById('root')
+);
